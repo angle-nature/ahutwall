@@ -1,0 +1,35 @@
+<!--pages/yindao/yindao.wxml-->
+<view>
+  <view>
+    <text class="yindao_name">小程序名称</text>
+  </view>
+  <view>
+    <text class="yindao_tishi">完善信息，个性化你的内容</text>
+  </view>
+  <view class="sex">
+    <view>
+      <image class="man" src="/images/male.png" bindtap="onReachman"></image>
+    </view>
+    <view>
+      <image class="woman" src="/images/female.png" bindtap="onReachwoman"> </image>
+    </view>
+  </view>
+  <view class="inputbox">
+    <view class="inpbox">
+      <radio-group bindchange="radioChange" class="inp radiogroup">
+        <view class="radiobox" wx:for="{{sex}}" wx:key="value">
+          <radio value="{{item.id}}" color="#86bc9c" checked="{{item.checked}}"/>
+          <view class="radiotxt">{{item.value}}
+            <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+          </view>
+        </view>
+        <view>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+
+  <button class="years" bindtap="sentdirect">
+    <text class="textcontent">请完善年龄信息</text>
+  </button>
+</view>

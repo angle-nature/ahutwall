@@ -1,0 +1,51 @@
+/* pages/yindao_years/yindao_years.wxss */
+.jianj{
+  margin-left: 5%;
+}
+.jianjcontext{
+  font-size: 40rpx;
+}
+.container{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  margin-left: 5%;
+  height: 150rpx;
+  width: 90%;
+  border-radius: 30px;
+  background-color:white;
+  display: flex;
+  border-color: #BBBBBB;
+}
+.inputs{
+ margin-top:-200rpx;
+ margin-left: -200rpx;
+ 
+}
+.birthday{
+  border-width: 5rpx;
+  border-color: #F1F0F0;
+}
+.birthBox{
+  margin-left: 90rpx;
+}
+.date_text{
+  line-height: 70rpx;
+}
+.next{
+  margin-top: 50rpx;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 80rpx;
+  width: 60%;
+  background-color: #86BC9C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+.textcontent{
+  margin-top: 10rpx;
+  color: white;
+  margin: auto;
+  
+  }

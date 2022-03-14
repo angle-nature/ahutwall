@@ -1,0 +1,182 @@
+.gradient {
+    position: fixed;
+    top: 13%;
+    left: 0;
+    right: 0;
+    margin-bottom: 16rpx;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.gradient .box {
+    padding: 0 45rpx;
+}
+
+.glyphicon .iconfont {
+    font-size: 30rpx;
+}
+
+.spaceAroundCenter {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.spaceAroundCenter_date {
+    font-size: 28rpx;
+}
+
+.flex-item {
+    /* flex-flow: nowrap;
+    flex-grow: 1;
+    flex-shrink: 1; */
+    width: 14.2%;
+    /* padding: 10rpx 0; */
+    height: 85rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#flex_align_justify_c {
+    width: 80%;
+    height: 50%;
+    line-height: 150%;
+}
+
+.item-content {
+    font-size: 28rpx;
+    width: 60rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+}
+
+/* 当前日期 */
+.bk-color-day {
+    color: #fff;
+    border-radius: 50%;
+    background-color: #CACACA;
+}
+
+/* 当前选中日期 */
+.bk-color-dayClick {
+    color: #fff;
+    border-radius: 50%;
+    background-color:  #86BC9C;
+}
+
+.item-content-current-day {
+    flex-grow: 2;
+}
+
+.day_item {
+    position: relative;
+}
+
+.day_item_circle {
+    width: 10rpx;
+    height: 10rpx;
+    background:  #86BC9C;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+}
+
+.flex_align_justify_b {
+    background-color:  #86BC9C;
+    color: #fff;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+.btn>view {
+    width: 100%;
+    height: 100rpx;
+    color:  #86BC9C;
+    text-align: center;
+    line-height: 100rpx;
+    border-top: 2rpx solid  #86BC9C;
+}
+
+.cancel {
+    float: right;
+}
+
+.confirm {
+    float: right;
+    border-left: 2rpx solid  #86BC9C;
+}
+
+.userinfo {
+    width: 95%;
+    margin: 0rpx auto;
+}
+
+.userinfo>view {
+    height: 100rpx;
+    width: 100%;
+    border-bottom: 1rpx solid rgb(240, 240, 240);
+    font-size: 25rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar>image {
+    height: 80rpx;
+    width: 80rpx;
+    border-radius: 12.5%;
+}
+
+.gender>view,
+.birthday>view,
+.address>view {
+    display: flex;
+    flex-direction: row;
+}
+
+.introduction>text:first-child {
+    width: 15%;
+}
+
+.introduction>textarea {
+    width: 65%;
+}
+
+.submit {
+    width: 300rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    background-color: #86BC9C;
+    color: #fff;
+    font-size: 25rpx;
+    margin: 100rpx auto;
+    border-radius: 55rpx;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.placeholder{
+    text-align: right;
+}

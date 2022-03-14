@@ -1,0 +1,92 @@
+page{
+  background-color: rgb(240, 240, 240);
+}
+
+.iconfont{
+  font-size: 50rpx;
+  color: black;
+}
+
+.notice{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 30rpx 20rpx;
+  position: relative;
+}
+
+.notice view:first-child{
+  margin-right: 20rpx;
+}
+
+.notice_text view{
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 5rpx;
+}
+
+.notice_text text{
+  font-size: 27rpx;
+  width: 600rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.box_view{
+  margin-top: 30rpx;
+  width: 100vw;
+  background-color: white;
+}
+
+.item_box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 30rpx 20rpx;
+}
+
+.box_view .border{
+  border-bottom: 1rpx solid rgb(240, 240, 240);
+}
+
+.item_box .item_text{
+  font-size: 27rpx;
+  margin-left: 20rpx;
+}
+
+.feedback_box{
+  margin-top: 30rpx;
+  width: 100vw;
+  padding: 30rpx 20rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  font-size: 27rpx;
+  position: relative;
+}
+
+.feedback_box .iconfont{
+  font-size: 70rpx;
+  position: relative;
+  right: 10rpx;
+  font-weight: 500;
+}
+
+.red_spot{
+  position: absolute;
+  height: 30rpx;
+  width: 30rpx;
+  border-radius: 15rpx;
+  background-color: #f74f4f;
+  right: 60rpx;
+  top: 40rpx;
+}
+
+.notice .red_spot{
+  left: 50rpx;
+  top: 27rpx;
+}

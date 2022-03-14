@@ -1,0 +1,11 @@
+<view class="report_reason">
+    <view class="label">投诉原因</view>
+    <view class="report_type">{{reportType}}</view>
+</view>
+<view class="report_description">投诉描述（必填）<text style="color: rgb(225,17,17);">*</text></view>
+<view class="textarea_view">
+    <textarea bindinput="bindTextareaInput" maxlength="200" placeholder="提供更多内容信息,有助于投诉被快速处理~"></textarea>
+    <text>{{usedNumber}}/200</text>
+</view>
+<view class="{{usedNumber>0?'submit_available':'submit'}}" hover-class="{{usedNumber>0?'click_view':''}}" bindtap="bindsumbit">提交</view>
+<view class="tip">您的投诉信息,处理结果将在第一时间给您推送反馈</view>

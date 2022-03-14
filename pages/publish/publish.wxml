@@ -1,0 +1,20 @@
+<view class="top_view">
+    <view class="uploadImage" bindtap="uploadImage">
+        <text class="iconfont icon-xiangji"></text>
+    </view>
+    <view class="images_box">
+        <view class="image_view" wx:for="{{images}}">
+            <image mode="aspectFill" src="{{item}}" bindtap="previewImage" data-imageurl="{{item}}"></image>
+            <view class="iconfont icon-chacha" bindtap="deleteImage" data-imageurl="{{item}}"></view>
+        </view>
+    </view>
+</view>
+<view class="textarea_view">
+    <textarea placeholder="快来表白吧~（害羞可选择匿名表白哦）" bindinput="bindinput" maxlength="{{maxContentLength}}"></textarea>
+    <view class="iconfont icon-niming" bindtap="anonymouslySend" style="color: {{anonymityStatus?'#000000':'#cbcbcb'}};"></view>
+    <text class="number">{{usedNumber}}/{{maxContentLength}}</text>
+</view>
+<view class="buttons">
+    <view class="save">保存草稿</view>
+    <view class="publish" bindtap="bindsumbit">发布</view>
+</view>

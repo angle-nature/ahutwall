@@ -1,0 +1,10 @@
+<view class="blank_view" style="height:{{height}}rpx"></view>
+<view class="catbar" style="height:{{height}}rpx">
+    <scroll-view class="categories" scroll-x="{{true}}" scroll-left="{{scrollLeft}}" scroll-with-animation="{{true}}" scroll-anchoring="{{false}}" enhanced="{{true}}" show-scrollbar="{{false}}">
+        <block wx:for="{{categoriesData}}" wx:for-item="item" wx:for-index="index" wx:key="*this">
+            <view class="category" style="padding-right:{{paddingRight}}rpx;padding-left:{{index==0?firstPaddingLeft:0}}" bind:tap="onChanging" data-index="{{index}}">
+                <text class="category-name {{nowIndex==index?'current-category':''}}">{{item}}</text>
+            </view>
+        </block>
+    </scroll-view>
+</view>

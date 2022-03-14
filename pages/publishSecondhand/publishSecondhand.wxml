@@ -1,0 +1,64 @@
+<tabs tabs="{{tabs}}" boxShadow="true" themeColor="#6fba4d" bindtabsItemChange="handleTabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="input_box">
+            <textarea placeholder="提供的信息越多越容易卖出去哦~" maxlength="500"></textarea>
+            <scroll-view wx:if="{{images.length != 0}}" class="images_box" scroll-y="true">
+                <view class="image_view" wx:for="{{images}}">
+                    <image src="{{item}}" mode="aspectFill" bindtap="previewImage" data-imageurl="{{item}}"></image>
+                    <view class="iconfont icon-chacha" bindtap="deleteImage" data-imageurl="{{item}}"></view>
+                </view>
+            </scroll-view>
+            <view class="uploadImage" bindtap="uploadImage">
+                <text class="iconfont icon-jia">上传优质照片更吸引人~</text>
+            </view>
+        </view>
+        <view class="price_view">
+            <text class="iconfont icon-shangpin"></text>
+            <view class="price_label">名称</view>
+            <input type="text" placeholder="商品名称" />
+        </view>
+        <view class="price_view">
+            <text class="iconfont icon-jiage"></text>
+            <view class="price_label">价格</view>
+            <input class="price" type="text" placeholder="0.00" placeholder-class="place_prcie" />
+        </view>
+        <view class="price_view">
+            <text class="iconfont icon-huanjia"></text>
+            <view class="price_label">不接受还价</view>
+            <switch type="switch" color="#6fba4d"></switch>
+        </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">
+        <view class="input_box">
+            <textarea placeholder="尽量详细描述您想要的商品哦~" maxlength="500"></textarea>
+            <scroll-view wx:if="{{images.length != 0}}" class="images_box" scroll-y="true">
+                <view class="image_view" wx:for="{{images}}">
+                    <image src="{{item}}" mode="aspectFill" bindtap="previewImage" data-imageurl="{{item}}"></image>
+                    <view class="iconfont icon-chacha" bindtap="deleteImage" data-imageurl="{{item}}"></view>
+                </view>
+            </scroll-view>
+            <view class="uploadImage" bindtap="uploadImage">
+                <text class="iconfont icon-jia">上传优质照片~</text>
+            </view>
+        </view>
+        <view class="price_view">
+            <text class="iconfont icon-shangpin"></text>
+            <view class="price_label">名称</view>
+            <input type="text" placeholder="商品名称" />
+        </view>
+        <view class="price_view">
+            <text class="iconfont icon-jiage"></text>
+            <view class="price_label">预期最低价格</view>
+            <input class="price" type="text" placeholder="0.00" placeholder-class="place_prcie" />
+        </view>
+        <view class="price_view">
+            <text class="iconfont icon-jiage"></text>
+            <view class="price_label">预期最高价格</view>
+            <input class="price" type="text" placeholder="0.00" placeholder-class="place_prcie" />
+        </view>
+    </block>
+</tabs>
+<view class="buttons">
+    <view class="save">保存草稿</view>
+    <view class="publish">发布</view>
+</view>

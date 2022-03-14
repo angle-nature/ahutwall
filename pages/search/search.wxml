@@ -1,0 +1,21 @@
+<view class="top_box">
+    <view class="search_view">
+        <text class="iconfont icon-search"></text>
+        <input type="text" placeholder="搜索动态、话题、用户" confirm-type="search" />
+    </view>
+    <view class="search_button">搜索</view>
+</view>
+<view class="history_box" wx:if="{{showHistory}}">
+    <view class="history">历史记录</view>
+    <view class="iconfont icon-shanchu" bindtap="binddelete" style="position: absolute; right: 54rpx; top: 0; font-size: 40rpx;"></view>
+    <view class="history_content">
+        <view hover-class="click_view" class="history_item" wx:for="{{historyConetent}}">{{item}}</view>
+        <view id="down_up_button" class="iconfont {{showStatus?'icon-shangla':'icon-xiala1'}}" bindtap="showMoreHistory"></view>
+    </view>
+</view>
+<view class="bottom_box">
+    <view class="find">探索发现</view>
+    <view class="hot_search">
+        <text class="hot_search_item" wx:for="{{hotSearchWord}}">{{item}}</text>
+    </view>
+</view>

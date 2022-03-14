@@ -1,0 +1,332 @@
+/* pages/mine/mine.wxss */
+page {
+    background-color: rgb(240, 240, 240);
+}
+
+.header {
+    width: 82%;
+    padding: 4%;
+    height: 300rpx;
+    margin: 0rpx auto;
+    margin-top: 60rpx;
+    border-radius: 30rpx;
+    background-color: #fff;
+    box-shadow: 3rpx 3rpx 10rpx 3rpx rgba(0,0,0,0.1);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user {
+    width: 53%;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-avatar {
+    width: 100rpx;
+    height: 100%;
+    border-radius: 12.5%;
+}
+
+.userinfo {
+    color: #000;
+    height: 100%;
+}
+
+.userinfo-nickname {
+    margin-bottom: 20rpx;
+    font-weight: bold;
+    font-size: 28rpx;
+}
+
+.userinfo-level {
+    float: left;
+    width: 80rpx;
+    font-size: 22rpx;
+    line-height: 40rpx;
+    text-align: center;
+    height: 40rpx;
+    border-radius: 16rpx;
+    background-color: #86BC9C;
+    color: #fff;
+}
+.userinfo-constellation {
+    float: right;
+    margin-left: 10rpx;
+    width: 120rpx;
+    font-size: 22rpx;
+    height: 40rpx;
+    border-radius: 16rpx;
+    background-color:  #86BC9C;
+    display: flex;
+    align-items: center;
+}
+
+.userinfo-constellation>text:first-child {
+    margin-left: 5rpx;
+    margin-right: 5rpx;
+    color: white;
+}
+
+.userinfo-constellation>text {
+    color: white;
+}
+
+.userinfo-constellation>image {
+    float: left;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.set {
+    width: 175rpx;
+    height: 40rpx;
+    font-size: 24rpx;
+    color: #fff;
+}
+.set>.date{
+    color: #000;
+}
+
+.edit {
+    width: 145rpx;
+    padding: 0 15rpx;
+    height: 100%;
+    border-radius: 16rpx;
+    background-color:  #aaa;
+    line-height: 40rpx;
+    margin-bottom: 5rpx;
+    display: flex;
+    align-items: center;
+}
+
+.edit>text:first-child{
+    margin-right: 15rpx;
+}
+
+.date {
+    width: 175rpx;
+    text-align: center;
+}
+
+.introduction {
+    margin-top: 20px;
+    width: 100%;
+    height: 75rpx;
+    color: #000;
+    font-size: 27rpx;
+}
+
+.option {
+    margin-top: 15rpx;
+    font-size: 24rpx;
+    color: #000;
+}
+
+.option-common {
+    padding: 10rpx 15rpx;
+    float: left;
+    width: 90rpx;
+    height: 80rpx;
+    text-align: center;
+}
+
+.energy {
+    padding: 10rpx 0;
+    float: right;
+    width: 130rpx;
+}
+
+.content {
+    width: 90%;
+    margin: 50rpx auto;
+}
+.content-content{
+    border-radius: 30rpx;
+    box-shadow: 3rpx 3rpx 10rpx 3rpx rgba(0,0,0,0.1);
+}
+.content>.content-title{
+    height: 50rpx;
+    line-height: 50rpx;
+    margin-bottom: 50rpx;
+}
+.content>.content-title>view {
+    float: left;
+    height: 100%;
+    color: #000;
+    padding: 0 75rpx;
+    text-align: center;
+}
+.click_daily,
+.cilck_step {
+    width: 100%;
+}
+.daily-title,
+.step-title,.collect-title{
+    text-align: left;
+    font-size: 27rpx;
+    color: #000;
+}
+.daily-content,
+.step-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22rpx;
+    color: #000;
+}
+
+.daily-content>.icon-fuhaolei-yemian,
+.step-content>.icon-fuhaolei-yemian {
+    /* width: 70rpx;
+    height: 80rpx; */
+    font-size: 70rpx;
+    margin: 20rpx 0 30rpx;
+}
+.myDaily,.nowCondition,.myCollect{
+    padding: 4% 4% 6%;
+    background-color: #fff;
+    border-radius: 30rpx;
+}
+.publish,
+.authorization {
+    width: 180rpx;
+    font-size: 22rpx;
+    text-align: center;
+    height: 50rpx;
+    border-radius: 30rpx;
+    background-color:  #86BC9C;
+    line-height: 50rpx;
+    margin-top: 30rpx;
+    color: #fff;
+}
+.daily-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22rpx;
+    height: 100rpx;
+    width: 96%;
+    padding: 2%;
+    border-bottom: 1rpx solid rgb(240,240,240);
+    margin-bottom: 20rpx;
+}
+
+/* .daily-list:last-child{
+    border-bottom: none;
+} */
+
+.daily-list:nth-child(2){
+    margin-top: 20rpx;
+}
+.daily-list:last-child{
+    margin: 0;
+}
+.daily-list>.daily-left{
+    width: 80%;
+    height: 100%;
+}
+.daily-message{
+    margin-bottom: 10rpx;
+    height: 2rem;
+}
+.daily-type{
+    float: left;
+    color: #B5B6BA;
+}
+.daily-time{
+    float: left;
+    margin-left: 20rpx;
+    color: #B5B6BA;
+}
+.daily-list>.daily-right{
+    width: 15%;
+}
+.daily-right>image{
+    width: 90rpx;
+    height: 90rpx;
+}
+.step-common {
+    width: 25%;
+    margin: 30rpx 0 0 0;
+    text-align: center;
+}
+
+.step-common>view {
+    margin-bottom: 20rpx;
+    color: #aaa;
+}
+
+.cartogram {
+    width: 92%;
+    border-radius: 30rpx;
+    background-color: #fff;
+    padding: 4% 4% 8%;
+    margin-top: 40rpx;
+}
+
+.container {
+    width: 100%;
+}
+
+.echarts {
+    width: 100%;
+    height: 500rpx;
+}
+
+ec-canvas {
+    width: 100%;
+    height: 100%;
+}
+.step-excel{
+    margin-top: 40rpx;
+    width: 92%;
+    border-radius: 30rpx;
+    background-color: #fff;
+    padding: 4% 4% 8%;
+}
+.week-step-item{
+    height: 80rpx;
+    width: 100%;
+    line-height: 80rpx;
+    font-size: 22rpx;
+    border-bottom: 2rpx solid #aaa;
+}
+.week-step-item>view:first-child{
+    float: left;
+}
+.week-step-item>view>image{
+    width: 50rpx;
+    height: 50rpx;
+    float: left;
+}
+.week-step-item>view>view{
+    float: right;
+}
+.week-step-item>view:last-child{
+    float: right;
+}
+.end{
+    color: #000;
+    margin-top: 15rpx;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 25rpx;
+}
+.collect-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22rpx;
+}
+.collect-content>image{
+    width: 300rpx;
+    height: 200rpx;
+}

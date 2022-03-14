@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "searchInput":"../../components/searchInput/searchInput",
+    "tabs":"../../components/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "二手交易墙"
+}

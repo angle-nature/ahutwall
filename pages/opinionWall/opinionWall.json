@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "scorllTabs":"../../components/scroll_tabs/scroll_tabs"
+  },
+  "navigationBarTitleText": "食堂意见墙"
+}

@@ -1,0 +1,11 @@
+<!--pages/yindao_touxiang/yindao_touxiang.wxml-->
+<view>
+<image class="touxiang" src="/images/avatar_boy.png"></image>
+
+</view>
+<view wx:if="{{canIUse}}" class='mai'>
+  <button class='but' bindtap="getUserProfile">授权获取头像，昵称</button>
+  <view class='med'>————— · —————</view>
+  <view class='txt'>\t\t欢迎使用小程序，我们需要一些您的公开信息，包括微信昵称、头像等。请放心，我们会妥善保管您的信息~</view>
+</view>
+<view wx:else>请升级微信版本</view>

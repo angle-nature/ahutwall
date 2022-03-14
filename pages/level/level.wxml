@@ -1,0 +1,69 @@
+<view class="header">
+    <image class="user-avatar" src="{{user.avatarUrl}}"></image>
+    <view class="nickname">{{user.nickName}}</view>
+    <view class="level-bg">
+        <view class="level-content" style="width: {{user.experienceValue/1000*200}}rpx;"></view>
+    </view>
+    <view class="level">
+        <text>Lv.{{user.level}}</text>
+        <text>{{user.experienceValue}}/1000</text>
+    </view>
+</view>
+<view class="out">
+    <view class="level-info">
+        <view class="level-title">关于账号等级</view>
+        <view class="level-txt">账号等级是本小程序真对每位用户推出的账号成长体系，用户今后在发表留言以及互动过程中，都能获得账号升级所需的经验值。</view>
+        <view class="level-txt">不同的经验值对象不同的用户等级，每个等级对应不同的等级标识。用户也可通过我的页面查看自己的账号等级。</view>
+        <view class="level-list">
+            <view class="level-item" wx:for="{{level_list}}">
+                <text>Lv.{{index+1}}</text>
+                <text>{{item}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="task">
+        <view class="task-title">如何获得经验值</view>
+        <view class="task-content">
+            <view class="task-item">
+                <text>首次注册</text>
+                <text>√ +100</text>
+            </view>
+            <view class="task-item">
+                <text>每日登录</text>
+                <text>+20</text>
+            </view>
+            <view class="task-item">
+                <text>每日首次发布留言</text>
+                <text>+100</text>
+            </view>
+            <view class="task-item">
+                <text>发布一个留言</text>
+                <text>+50</text>
+            </view>
+            <view class="task-item">
+                <text>点赞一次</text>
+                <text>+10</text>
+            </view>
+            <view class="task-item">
+                <text>评论一次</text>
+                <text>+10</text>
+            </view>
+            <view class="task-item">
+                <text>收藏一次</text>
+                <text>+50</text>
+            </view>
+            <view class="task-item">
+                <text>生日奖励</text>
+                <text>+200</text>
+            </view>
+            <view class="task-item">
+                <text>持续每天登录一周</text>
+                <text>+100</text>
+            </view>
+            <view class="task-item">
+                <text>持续每天发布留言一周</text>
+                <text>+200</text>
+            </view>
+        </view>
+    </view>
+</view>

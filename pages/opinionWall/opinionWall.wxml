@@ -1,0 +1,47 @@
+<scorllTabs height="70" categoriesData="{{canteens}}"></scorllTabs>
+<view wx:if="{{scrollTop>600}}" class="toTop" bindtap="gobackTop" catchtap>
+    <text class="iconfont icon-dingbu"></text>
+</view>
+<view class="first_tab" wx:for="{{messages}}" bindtap="lookDetail">
+    <view class="head_view">
+        <image class="userAvatar" src="{{item.avatar}}"></image>
+        <view class="text_view">
+            <view class="userName">{{item.name}}</view>
+            <view class="publish_time">{{item.publish_time}}</view>
+            <view class="score">{{item.score}}分</view>
+        </view>
+        <view class="level">LV.{{item.level}}</view>
+        <!-- <view catchtap bindtap="bindShowBox" class="iconfont icon-gengduo1"></view> -->
+    </view>
+    <view class="content_view">
+        <view class="text_content"><text>{{item.text_content}}</text></view>
+        <view class="images_content">
+            <!-- 图片一共有三种样式 分别是1、（2~4）、（5~9）张图片时的样式 -->
+            <image catchtap bindtap="previewImage" data-imageUrls="{{item.images_content}}" class="image_content{{item.images_content.length <= 4? ((item.images_content.length <=1 )?'1':'2'):3}}" wx:for="{{item.images_content}}" wx:for-item="imageSrc" data-imageSrc="{{imageSrc}}" mode="aspectFill" src="{{imageSrc}}"></image>
+        </view>
+    </view>
+    <view class="number_view">
+        <view class="number">共{{item.like_number}}点赞，{{item.comments_number}}条评论</view>
+        <view class="canteen">#{{item.canteen}}</view>
+        <view catchtap class="icons_view">
+            <view bindtap="bindLike" data-messageId="{{item.messageId}}" class="iconfont {{item.isLiked?'icon-liked':'icon-like'}}" data-index="{{index}}" style="{{item.isLiked?'color:#a18c4c;':''}}" animation="{{animationIndex==index?likeAnimationData:''}}"></view>
+            <view bindtap="bindCollect" data-messageId="{{item.messageId}}" class="iconfont {{item.isCollected?'icon-shoucang1':'icon-shoucang'}}" style="{{item.isCollected?'color:#a18c4c;':''}}" data-index="{{index}}" animation="{{animationIndex==index?collectAnimationData:''}}"></view>
+            <!-- <view bindtap="bindComment" data-messageId="{{item.messageId}}" class="iconfont icon-pinglun"></view> -->
+            <view bindtap="bindForword" data-messageId="{{item.messageId}}" class="iconfont icon-zhuanfa"></view>
+        </view>
+    </view>
+    <view catchtap class="comments_view" wx:for="{{item.comments}}" wx:for-item="comment">
+        <text class="comment_name">{{comment.name}}：</text>
+        <text class="comment_content">{{comment.content}}</text>
+    </view>
+    <view catchtap bindtap="bindComment" class="input_view" hover-class="click_view">
+        <view>评论</view>
+    </view>
+</view>
+<view wx:if="{{showComment}}" class="masklayer" bindtap="hideInput"></view>
+<view wx:if="{{showComment}}" class="sent_view" style="bottom: {{inputHeight-1}}px;">
+    <view class="commentInput_view">
+        <textarea bindfocus="getKeybordHeight" class="commentInput" type="text" placeholder="写评论" auto-focus="true" show-confirm-bar="{{false}}" auto-height="{{true}}" fixed="true" adjust-position="{{false}}" cursor-spacing="10" bindblur="hideInput" bindinput="bindCommentInput" bindconfirm="sendComment"></textarea>
+    </view>
+    <view class="sentComment" bindtap="sendComment">发送</view>
+</view>
