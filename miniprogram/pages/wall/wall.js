@@ -14,6 +14,7 @@ Page({
       animationStatus:false //false 表示关闭，true 表示展开
     },
   
+    // 弹出发布菜单
     popMenu(e) {
       var animation = wx.createAnimation({
         duration: "200",

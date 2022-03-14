@@ -1,14 +1,7 @@
 {
-    "description": "项目配置文件",
-    "packOptions": {
-        "ignore": [
-            {
-                "value": ".eslintrc.js",
-                "type": "file"
-            }
-        ],
-        "include": []
-    },
+    "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "miniprogramRoot": "miniprogram/",
+    "cloudfunctionRoot": "cloudfunctions/",
     "setting": {
         "urlCheck": true,
         "es6": true,
@@ -16,7 +9,7 @@
         "postcss": true,
         "preloadBackgroundData": false,
         "minified": true,
-        "newFeature": false,
+        "newFeature": true,
         "coverView": true,
         "nodeModules": false,
         "autoAudits": false,
@@ -36,28 +29,21 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "useIsolateContext": false,
+        "enableEngineNative": false,
+        "useIsolateContext": true,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
         "minifyWXSS": true,
         "disableUseStrict": false,
-        "minifyWXML": true,
         "showES6CompileOption": false,
         "useCompilerPlugins": false,
-        "ignoreUploadUnusedFiles": true
+        "minifyWXML": true
     },
-    "compileType": "miniprogram",
-    "libVersion": "2.19.4",
-    "appid": "wx381890e9a5a6bc72",
-    "projectname": "%E5%AE%89%E5%B7%A5%E5%A4%A7%E5%A2%99",
-    "debugOptions": {
-        "hidedInDevtools": []
-    },
-    "scripts": {},
-    "staticServerOptions": {
-        "servePath": ""
-    },
+    "appid": "wx1778b09518be7894",
+    "projectname": "quickstart-wx-cloud",
+    "libVersion": "2.23.0",
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
     "condition": {
         "search": {
             "list": []
@@ -65,20 +51,35 @@
         "conversation": {
             "list": []
         },
-        "game": {
-            "list": []
-        },
         "plugin": {
             "list": []
         },
-        "gamePlugin": {
+        "game": {
             "list": []
         },
         "miniprogram": {
-            "list": []
+            "list": [
+                {
+                    "id": -1,
+                    "name": "db guide",
+                    "pathName": "pages/databaseGuide/databaseGuide"
+                }
+            ]
         }
+    },
+    "compileType": "miniprogram",
+    "scripts": {},
+    "packOptions": {
+        "ignore": [],
+        "include": []
     },
     "watchOptions": {
         "ignore": []
+    },
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "staticServerOptions": {
+        "servePath": ""
     }
 }
