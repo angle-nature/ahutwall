@@ -1,0 +1,136 @@
+/* pages/privateletter/privateletter.wxss */
+page {
+    background-color: rgb(240, 240, 240);
+}
+
+.notice-list {
+    width: 100vw;
+    background-color: white;
+    border-bottom: 1rpx solid rgb(240, 240, 240);
+}
+
+.user {
+    display: flex;
+    padding: 20rpx 20rpx;
+}
+
+.user-avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 12.5%;
+    overflow: hidden;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.infonotic {
+    margin-left: 20rpx;
+    width: fit-content;
+    height: 30rpx;
+    background-color: #F2F2F2;
+    border-radius: 15rpx;
+    padding: 5rpx 15rpx;
+    display: flex;
+    align-items: center;
+    font-size: 22rpx;
+    margin-top: 5rpx;
+}
+
+.infonotic .iconfont {
+    margin-right: 5rpx;
+}
+
+.top_view {
+    margin-left: 20rpx;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 28rpx;
+    margin-right: 15rpx;
+}
+
+.notictime {
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    color: rgb(138, 138, 138);
+}
+
+.message_content {
+    display: flex;
+    margin: 20rpx 20rpx;
+    padding: 10rpx 10rpx;
+    background-color: rgb(240, 240, 240);
+}
+
+.myNickName {
+    word-break: keep-all;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.content {
+    word-break: break-all;
+    font-size: 27rpx;
+}
+
+.report_type,
+.report_content {
+    display: flex;
+    margin-left: 20rpx;
+    margin: 20rpx;
+    align-items: baseline;
+}
+
+.label {
+    font-size: 28rpx;
+    font-weight: bold;
+    word-break: keep-all;
+}
+
+.text {
+    font-size: 27rpx;
+    word-break: break-all;
+}
+
+.dispose {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: flex-end;
+}
+
+.delete,
+.reject,
+.deleted,
+.rejected {
+    width: fit-content;
+    padding: 0 20rpx;
+    height: 60rpx;
+    font-size: 27rpx;
+    color: white;
+    border-radius: 20rpx;
+    line-height: 60rpx;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.delete {
+    background-color: red;
+}
+
+.deleted{
+    background-color: rgb(167, 70, 26);
+}
+
+.reject{
+    background-color: blue;
+}
+
+.rejected {
+    background-color: green;
+}

@@ -1,0 +1,61 @@
+<searchInput placeholder="找找可有你丢失的物品" inputValue="{{searchKey}}" themeColor="#505d8a" bindsearch="bindsearch"></searchInput>
+<tabs tabs="{{tabs}}" themeColor="#505d8a" styleType="1" bindtabsItemChange="handleTabsItemChange">
+    <view wx:if="{{tabs[0].isActive}}" class="goods_box">
+        <view wx:if="{{messages.length == 0}}" class="blank_tip">
+            <image mode="widthFix" style="width: 90vw;" src="../../icons/noContent3.png"></image>
+        </view>
+        <view class="lost_goods_item" wx:for="{{messages}}">
+            <navigator url="/pages/lostfindWallDetail/lostfindWallDetail?_id={{item._id}}">
+                <view class="head_view">
+                    <image class="userAvatar" src="{{item.userInfo[0].avatarUrl}}"></image>
+                    <view class="text_view">
+                        <view class="userName">{{item.userInfo[0].nickName}}</view>
+                        <view class="publish_time">{{item.publish_time}}</view>
+                    </view>
+                    <view class="level">LV.{{item.userInfo[0].level}}</view>
+                </view>
+                <view class="info_item">
+                    <image mode="aspectFill" src="{{item.images_content[0]}}"></image>
+                    <view class="lost_goods_info">
+                        <view class="name">物件名称：<text>{{item.goods_name}}</text></view>
+                        <view class="place">丢失地点：<text>{{item.lost_place}}</text></view>
+                        <view class="time">丢失时间：<text>{{item.lost_time}}</text></view>
+                        <view class="detail">详情：<text>{{item.text_content}}</text></view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view wx:if="{{tabs[1].isActive}}" class="goods_box">
+        <view wx:if="{{messages.length == 0}}" class="blank_tip">
+            <image mode="widthFix" style="width: 90vw;" src="../../icons/noContent3.png"></image>
+        </view>
+        <view class="lost_goods_item" wx:for="{{messages}}">
+            <navigator url="/pages/lostfindWallDetail/lostfindWallDetail?_id={{item._id}}">
+                <view class="head_view">
+                    <image class="userAvatar" src="{{item.userInfo[0].avatarUrl}}"></image>
+                    <view class="text_view">
+                        <view class="userName">{{item.userInfo[0].nickName}}</view>
+                        <view class="publish_time">{{item.publish_time}}</view>
+                    </view>
+                    <view class="level">LV.{{item.userInfo[0].level}}</view>
+                </view>
+                <view class="info_item">
+                    <image mode="aspectFill" src="{{item.images_content[0]}}"></image>
+                    <view class="lost_goods_info">
+                        <view class="name">物件名称：<text>{{item.goods_name}}</text></view>
+                        <view class="place">拾取地点：<text>{{item.lost_place}}</text></view>
+                        <view class="time">拾取时间：<text>{{item.lost_time}}</text></view>
+                        <view class="detail">详情：<text>{{item.text_content}}</text></view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view wx:if="{{isBottom&&isTounchedBottom}}" class="toBottom_tip">
+        <view class="line"></view>
+        <view class="theEnd">THE END</view>
+        <view class="line"></view>
+    </view>
+</tabs>
+<gotoTop color="#505d8a" wx:if="{{scrollTop>400}}"></gotoTop>

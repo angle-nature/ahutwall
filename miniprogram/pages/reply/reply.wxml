@@ -1,0 +1,21 @@
+<view class="notice-list" wx:for="{{replyList}}">
+    <navigator url="../../pages/vindicateWallDetail/vindicateWallDetail?_id={{item.message[0].message_id}}">
+        <view class="user">
+            <image src="{{item.from_user_avatarUrl}}" class="user-avatar"></image>
+            <view class="userinfo">
+                <view class="top_view">
+                    <view class="username">{{item.from_user_nickName}}</view>
+                    <view class="notictime">{{item.time}}</view>
+                </view>
+                <view class="infonotic">
+                    <text class="iconfont icon-huifu1"></text>
+                    <text>回复了你</text>
+                </view>
+                <view class="reply_content">{{item.content}}</view>
+            </view>
+        </view>
+    </navigator>
+</view>
+<view class="text_blank_tip" wx:if="{{replyList.length == 0}}">
+    暂无回复~
+</view>

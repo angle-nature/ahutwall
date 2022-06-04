@@ -1,0 +1,116 @@
+page {
+    background-color: rgb(240, 240, 240);
+}
+
+.iconfont {
+    font-size: 50rpx;
+    color: black;
+}
+
+.notice {
+    height: 70rpx;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 30rpx 20rpx;
+    position: relative;
+}
+
+.notice view:first-child {
+    margin-right: 20rpx;
+}
+
+.notice_text view {
+    font-size: 28rpx;
+    font-weight: bold;
+    margin-bottom: 5rpx;
+}
+
+.notice_text text {
+    font-size: 27rpx;
+    width: 600rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.box_view,
+.official_part {
+    margin-top: 30rpx;
+    width: 100vw;
+    background-color: white;
+}
+
+.item_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 30rpx 20rpx;
+}
+
+.border {
+    border-bottom: 1rpx solid rgb(240, 240, 240);
+}
+
+.item_box .item_text {
+    font-size: 27rpx;
+    margin-left: 20rpx;
+}
+
+.feedback_box {
+    margin-top: 30rpx;
+    width: 100vw;
+    height: 120rpx;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 27rpx;
+    position: relative;
+}
+
+.feedback_box .iconfont {
+    font-size: 75rpx;
+    position: relative;
+    right: 10rpx;
+    font-weight: 500;
+    margin-left: 20rpx;
+}
+
+.feedback_box .feedback {
+    text-align: left;
+    background-color: white;
+    font-size: 27rpx;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.red_spot {
+    position: absolute;
+    height: 46rpx;
+    width: 46rpx;
+    border-radius: 23rpx;
+    background-color: #f74f4f;
+    right: 60rpx;
+    top: 30rpx;
+    text-align: center;
+    font-size: 24rpx;
+    line-height: 46rpx;
+    color: white;
+}
+
+.notice .red_spot {
+    width: 60rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 22rpx;
+}
+
+.icon-sixin {
+    position: relative;
+    bottom: 3rpx;
+}

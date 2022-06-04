@@ -1,0 +1,1 @@
+"F:\All IDE\微信开发者工具1.05\微信web开发者工具\cli.bat" cloud functions deploy --e ahutwall-cloud-1gyuekjuc3e0bd83 --n quickstartFunctions --r --project "E:\All Project\微信小程序\ahutwall" --report_first --report

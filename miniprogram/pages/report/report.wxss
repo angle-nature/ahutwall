@@ -1,0 +1,88 @@
+.report_reason{
+    display: flex;
+    height: 140rpx;
+    margin-left: 20rpx;
+    align-items: center;
+    font-size: 28rpx;
+}
+
+.report_reason .label{
+    color: rgb(153,138,138);
+    margin-right: 20rpx;
+}
+
+.report_reason .report_type{
+    font-weight: bold;
+}
+
+.report_description{
+    height: 80rpx;
+    margin-left: 20rpx;
+    align-items: center;
+    font-size: 28rpx;
+}
+
+.textarea_view{
+    position: relative;
+    width: 690rpx;
+    height: 400rpx;
+    border: 5rpx solid rgb(240, 240, 240);
+    box-shadow: 0 0 8rpx 8rpx rgb(240, 240, 240);
+    margin-left: 20rpx;
+    border-radius: 20rpx;
+    padding-left: 20rpx;
+    padding-top: 20rpx;
+    font-size: 27rpx;
+}
+
+.textarea_view textarea{
+    width: 670rpx;
+}
+
+.textarea_view text{
+    position: absolute;
+    bottom: 20rpx;
+    right: 20rpx;
+    color: rgb(138,138,138);
+}
+
+.submit{
+    position: absolute;
+    width: 500rpx;
+    height: 90rpx;
+    left: 125rpx;
+    bottom: 100rpx;
+    background-color: rgb(221,221,221);
+    border-radius: 50rpx;
+    text-align: center;
+    line-height: 90rpx;
+    color: white;
+    font-size: 27rpx;
+}
+
+.submit_available{
+    position: absolute;
+    width: 500rpx;
+    height: 90rpx;
+    left: 125rpx;
+    bottom: 100rpx;
+    background-color: #86BC9C;
+    border-radius: 50rpx;
+    text-align: center;
+    line-height: 90rpx;
+    color: white;
+    font-size: 27rpx;
+}
+
+.tip{
+    position: absolute;
+    bottom: 30rpx;
+    width: 100vw;
+    text-align: center;
+    color: rgb(178,167,167);
+    font-size: 24rpx;
+}
+
+.click_view{
+    background-color: rgb(150,150,150);
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "gotoTop": "../../components/gotoTop/gotoTop"
+  },
+  "navigationBarTitleText": "表白墙",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

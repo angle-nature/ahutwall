@@ -1,0 +1,18 @@
+@import '../../styles/iconfont.wxss';
+.toTop {
+    width: 74rpx;
+    height: 74rpx;
+    position: fixed;
+    right: 20rpx;
+    top: 200rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 5rpx 5rpx 10rpx 5rpx #cbcbcb;
+}
+
+.toTop text {
+    font-size: 36rpx;
+    color: white;
+}

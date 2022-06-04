@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "searchInput": "../../components/searchInput/searchInput",
+    "tabs": "../../components/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "失物招领墙",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,30 @@
+.question{
+    background-color: white;
+    font-size: 27rpx;
+    padding: 20rpx 20rpx;
+}
+
+.question .label{
+    font-weight: bold;
+    font-size: 28rpx;
+}
+
+.ask,.answer{
+    display: flex;
+}
+
+.image_box{
+    background-color: white;
+    display: flex;
+    width: 96vw;
+    align-items: flex-end;
+    /* margin-bottom: 50rpx; */
+    /* flex-direction: column; */
+    margin: 0 auto;
+    border-bottom: 2rpx solid rgb(240, 240, 240);
+}
+
+.image_box image{
+    margin: 10rpx 0;
+    /* box-shadow: 6rpx 6rpx 10rpx 6rpx rgba(0,0,0,0.3); */
+}

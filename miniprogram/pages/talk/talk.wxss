@@ -1,0 +1,181 @@
+page {
+    background-color: rgb(240, 240, 240);
+    height: 100%;
+}
+
+.avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 12.5%;
+}
+
+.center {
+    /* height: calc(100vh - 90rpx); */
+    width: 100vw;
+}
+
+.mess {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    margin: 20rpx 0;
+    position: relative;
+}
+
+.rightBox {
+    justify-content: flex-end;
+    position: relative;
+    right: 10rpx;
+}
+
+.leftBox {
+    margin-left: 10rpx;
+}
+
+.right {
+    background-color: white;
+}
+
+.left {
+    background-color: #2CD18A;
+    color: white;
+}
+
+.message {
+    padding: 20rpx;
+    border-radius: 20rpx;
+    font-size: 27rpx;
+    margin: 0 20rpx;
+    word-break: break-all;
+    max-width: 55vw;
+}
+
+.imageMessage {
+    width: 400rpx;
+    margin: 0 10rpx;
+    border-radius: 10rpx;
+}
+
+.sent_view {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    background-color: white;
+    border-top: 1rpx solid rgb(240, 240, 240);
+    z-index: 2000;
+    align-items: center;
+    padding: 10rpx 0;
+    bottom: 0;
+}
+
+.commentInput_view {
+    background-color: rgb(240, 240, 240);
+    width: 78%;
+    margin-left: 20rpx;
+    font-size: 27rpx;
+    border-radius: 5rpx;
+    padding: 14rpx 10rpx;
+}
+
+.commentInput {
+    width: 100%;
+    padding: 5rpx 10rpx;
+}
+
+.sentComment {
+    font-size: 27rpx;
+    background-color: #86BC9C;
+    text-align: center;
+    height: 70rpx;
+    width: 100rpx;
+    margin-left: 15rpx;
+    color: white;
+    line-height: 75rpx;
+    border-radius: 5rpx;
+}
+
+.icon-tupian {
+    position: absolute;
+    right: 30rpx;
+    font-size: 60rpx;
+}
+
+.message_icon {
+    position: absolute;
+    right: 80rpx;
+    top: 5rpx;
+    color: white;
+}
+
+.icon-zuosanjiaoxing {
+    position: absolute;
+    left: 80rpx;
+    top: 5rpx;
+    color: #2CD18A;
+}
+
+.option_box {
+    position: relative;
+    width: 150rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
+    display: flex;
+    opacity: 0.7;
+    background-color: #000000;
+    color: white;
+    font-size: 24rpx;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.box_icon {
+    position: absolute;
+    bottom: 15rpx;
+    right: -20rpx;
+    /* opacity: 0.7; */
+    color: #000000;
+}
+
+.split_line {
+    width: 1rpx;
+    height: 60%;
+    margin: 0 10rpx;
+    background-color: white;
+}
+
+.delete_box {
+    position: relative;
+    width: 90rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
+    display: flex;
+    opacity: 0.7;
+    background-color: #000000;
+    /* top: -70rpx;
+    right: 240rpx; */
+    color: white;
+    font-size: 24rpx;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.mask_layer {
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.talk_time{
+    text-align: center;
+    font-size: 24rpx;
+    margin: 10rpx 0;
+}
+
+.click{
+    background-color: #6ab387;
+}

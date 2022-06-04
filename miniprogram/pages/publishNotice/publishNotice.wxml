@@ -1,0 +1,13 @@
+<view class="report_reason">
+    <view class="label">通知标题</view>
+</view>
+<view class="title_view">
+    <textarea bindinput="bindTitleInput" maxlength="30" placeholder="标题"></textarea>
+    <text>{{usedTitleNumber}}/30</text>
+</view>
+<view class="report_description">通知内容</view>
+<view class="textarea_view">
+    <textarea bindinput="bindTextareaInput" maxlength="800" placeholder="仔细斟酌后再发布"></textarea>
+    <text>{{usedNumber}}/800</text>
+</view>
+<view class="{{(usedNumber>0&&usedTitleNumber>0)?'submit_available':'submit'}}" hover-class="{{(usedNumber>0&&usedTitleNumber>0)?'click_view':''}}" bindtap="bindsumbit">发布</view>

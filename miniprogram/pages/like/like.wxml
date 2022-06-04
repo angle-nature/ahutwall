@@ -1,0 +1,24 @@
+<view class="notice-list" wx:for="{{likeList}}">
+    <view class="user">
+        <image src="{{item.userInfo[0].avatarUrl}}" class="user-avatar"></image>
+        <view class="userinfo">
+            <view class="top_view">
+                <view class="username">{{item.userInfo[0].nickName}}</view>
+                <view class="notictime">{{item.like_time}}</view>
+            </view>
+            <view class="infonotic">
+                <text class="iconfont icon-like"></text>
+                <text>点赞了你</text>
+            </view>
+        </view>
+    </view>
+    <navigator url="../../pages/vindicateWallDetail/vindicateWallDetail?_id={{item.message_id}}">
+        <view class="message_content">
+            <view class="myNickName">{{userInfo.nickName}}：</view>
+            <view class="content">{{item.message[0].text_content}}</view>
+        </view>
+    </navigator>
+</view>
+<view class="text_blank_tip" wx:if="{{likeList.length == 0}}">
+    暂无点赞~
+</view>

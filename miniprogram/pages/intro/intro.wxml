@@ -1,0 +1,6 @@
+<!--pages/intro/intro.wxml-->
+<view class="intro">
+    <input style="width: 90%;" maxlength="30" bindinput="iptIntro" value="{{introduction}}"/>
+    <view>{{num}}/30</view>
+</view>
+<view class="submit" bindtap="confirmIntro">确定</view>

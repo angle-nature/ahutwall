@@ -1,0 +1,67 @@
+<!--pages/sixinjiemian/sixinjiemian.wxml-->
+<view class="header">
+    <view class="header-top">
+        <view class="user">
+            <image class="user-avatar" src="{{user.avatarUrl}}"></image>
+            <view class="userinfo">
+                <view class="userinfo-nickname">{{user.nickName}}</view>
+                <view class="userinfo-level" bindtap="clickLevel">Lv.{{user.level}}</view>
+                <view class="userinfo-constellation">
+                    <text class="iconfont icon-{{user.gender==1?'xingbie_nv':'xingbienan'}}"></text>
+                    <text>{{user.constellation}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="set">
+            <view class="edit" bindtap="redirectTosixin">
+                <text>私信</text>
+                <!-- <image src="/images/set.png"></image> -->
+                <text class="iconfont icon-sixin"></text>
+            </view>
+            <view class="date">已加入{{user.date}}天</view>
+        </view>
+    </view>
+    <view class="introduction">{{user.introduction==""?'这个人很懒，暂无签名~':user.introduction}}</view>
+    <view class="option">
+        <view class="loved option-common">
+            <view>{{user.liked_number}}</view>
+            <text>被点赞</text>
+        </view>
+        <view class="remarked option-common">
+            <view>{{user.commented_number}}</view>
+            <text>被评论</text>
+        </view>
+    </view>
+    <view class="address">{{user.address==''?'暂无地区信息':user.address}}</view>
+</view>
+<view class="content">
+    <view class="content-content">
+        <view class="click_daily">
+            <view class="myDaily" wx:if="{{!hasDaily}}">
+                <view class="daily-title">Ta的日常</view>
+                <view class="daily-content">
+                    <!-- <image src="/images/note.png"></image> -->
+                    <view class="iconfont icon-fuhaolei-yemian"></view>
+                    <text>Ta还没有发布任何内容</text>
+                </view>
+            </view>
+            <view class="myDaily" wx:else>
+                <view class="daily-title">Ta的日常</view>
+                <view class="daily-list {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" wx:for="{{dailyList}}" wx:key="">
+                    <view class='daily-item' data-messageid="{{item._id}}" data-walltype="{{item.type}}" bindtap="navigateToWallDetail" data-index="{{index}}">
+                        <view class='column'>
+                            <view class='full_width daily-left'>
+                                <view class="daily-message">{{item.text_content}}</view>
+                                <view class="daily-type">{{type[item.type]}}</view>
+                                <view class="daily-time">{{item.publish_time}}</view>
+                            </view>
+                            <view class="daily-right">
+                                <image mode="aspectFill" class="daily-pic" src="{{item.images_content[0]}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

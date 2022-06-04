@@ -1,0 +1,39 @@
+<view class="out_box">
+    <view class="images_swiper">
+        <swiper autoplay interval="3000" circular indicator-dots indicator-active-color="#6fba4d">
+            <swiper-item wx:for="{{message.images_content}}" wx:for-item="imageSrc">
+                <image mode="aspectFill" src="{{imageSrc}}" bindtap="previewImage" data-imagesrc="{{imageSrc}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="head_view">
+        <image bindtap="bindNavigateToSixin" class="userAvatar" src="{{message.userInfo[0].avatarUrl}}"></image>
+        <view class="text_view">
+            <view class="userName">{{message.userInfo[0].nickName}}</view>
+            <view class="publish_time">{{message.publish_time}}</view>
+        </view>
+        <view class="level">LV.{{message.userInfo[0].level}}</view>
+        <view wx:if="{{userInfo.openid!=message.userInfo[0].openid}}" catchtap bindtap="bindShowBox" class="iconfont icon-gengduo1"></view>
+    </view>
+    <view class="goods_price"><text>￥</text>{{message.kind == 1?(message.min_price+'-'+message.max_price):message.price}}</view>
+    <view class="goods_name">{{message.goods_name}}</view>
+    <view class="detail">{{message.text_content}}</view>
+</view>
+<view class="bottom_box">
+    <view bindtap="bindCollect" class="iconfont {{message.isCollected?'icon-shoucang1':'icon-shoucang'}}" style="{{message.isCollected?'color:#6fba4d;':''}}" animation="{{animationData}}"></view>
+    <view class="collect_number">{{message.collect_number}}</view>
+    <view bindtap="gotoTalk" class="want">{{message.kind == 0?'我想要':'我要出'}}</view>
+</view>
+<view wx:if="{{showNote}}" class="masklayer2" animation="{{animationDataMask}}" bindtap="bindHideBox"></view>
+<view wx:if="{{showNote}}" class="report_note" animation="{{animationData2}}">
+    <view class="report_text">
+        <view>举报</view>
+        <text class="iconfont icon-cha" bindtap="bindHideBox"></text>
+    </view>
+    <navigator style="width: 100%;" wx:for="{{report_type}}" url="/pages/report/report?type={{item}}&message_id={{message._id}}&wallType=2">
+        <view class="report_detail">
+            <view class="detail_text">{{item}}</view>
+            <text class="iconfont icon-gengduo" style="color: rgb(138, 138, 138);"></text>
+        </view>
+    </navigator>
+</view>

@@ -1,0 +1,25 @@
+<view class="notice-list" wx:for="{{commentList}}">
+    <view class="user">
+        <image src="{{item.user_avatarUrl}}" class="user-avatar"></image>
+        <view class="userinfo">
+            <view class="top_view">
+                <view class="username">{{item.user_nickName}}</view>
+                <view class="notictime">{{item.comment_time}}</view>
+            </view>
+            <view class="infonotic">
+                <text class="iconfont icon-pinglun"></text>
+                <text>评论了你</text>
+            </view>
+        </view>
+    </view>
+    <view class="comment_content">{{item.content}}</view>
+    <navigator url="../../pages/vindicateWallDetail/vindicateWallDetail?_id={{item.message_id}}">
+        <view class="message_content">
+            <view class="myNickName">{{userInfo.nickName}}：</view>
+            <view class="content">{{item.message[0].text_content}}</view>
+        </view>
+    </navigator>
+</view>
+<view class="text_blank_tip" wx:if="{{commentList.length == 0}}">
+    暂无评论~
+</view>

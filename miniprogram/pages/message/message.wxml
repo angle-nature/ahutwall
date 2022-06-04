@@ -1,0 +1,68 @@
+<navigator url="/pages/inform/inform">
+    <view class="notice">
+        <view class="iconfont icon-tongzhi"></view>
+        <view class="notice_text">
+            <view>{{officialNotice.notice_title}}</view>
+            <text>{{officialNotice.notice_content}}</text>
+        </view>
+        <view wx:if="{{noticeStatus}}" class="red_spot">new</view>
+    </view>
+</navigator>
+<view class="box_view">
+    <navigator url="/pages/like/like">
+        <view class="item_box border">
+            <text class="iconfont icon-like"></text>
+            <text class="item_text">点赞</text>
+            <view wx:if="{{likeNumber>0}}" class="red_spot">{{likeNumber}}</view>
+        </view>
+    </navigator>
+    <navigator url="/pages/comment/comment">
+        <view class="item_box border">
+            <text class="iconfont icon-pinglun"></text>
+            <text class="item_text">评论</text>
+            <view wx:if="{{commentNumber>0}}" class="red_spot">{{commentNumber}}</view>
+        </view>
+    </navigator>
+    <navigator url="/pages/reply/reply">
+        <view class="item_box border">
+            <text class="iconfont icon-huifu1"></text>
+            <text class="item_text">回复</text>
+            <view wx:if="{{replyNumber>0}}" class="red_spot">{{replyNumber}}</view>
+        </view>
+    </navigator>
+    <navigator url="/pages/privateletter/privateletter">
+        <view class="item_box">
+            <text class="iconfont icon-sixin"></text>
+            <text class="item_text">私信</text>
+        </view>
+    </navigator>
+</view>
+<view class="box_view">
+    <navigator url="/pages/help/help">
+        <view class="item_box">
+            <text class="iconfont icon-xinshoubangzhu"></text>
+            <text class="item_text">使用帮助</text>
+        </view>
+    </navigator>
+</view>
+<view class="feedback_box">
+    <button open-type='feedback' class="feedback" style="width:100%; height: 100%;">
+        <text class="iconfont icon-wentifankui"></text>
+        意见反馈
+    </button>
+</view>
+<view wx:if="{{admin}}" class="official_part">
+    <navigator url="/pages/reportResult/reportResult">
+        <view class="item_box border">
+            <text class="iconfont icon-jubao"></text>
+            <text class="item_text">举报结果</text>
+            <view wx:if="{{reportNumber>0}}" class="red_spot">{{reportNumber}}</view>
+        </view>
+    </navigator>
+    <navigator url="/pages/publishNotice/publishNotice">
+        <view class="item_box">
+            <text class="iconfont icon-fabutongzhi1"></text>
+            <text class="item_text">发布官方通知</text>
+        </view>
+    </navigator>
+</view>

@@ -1,0 +1,109 @@
+/* pages/level/level.wxss */
+page{
+    background-color: rgb(240, 240, 240);
+}
+.header{
+    width: 100%;
+    height: 210rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #86bc9c;
+    padding: 100rpx 0 100rpx;
+}
+.user-avatar {
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 12.5%;
+    border: 10rpx solid #fff;
+}
+.nickname{
+    margin-top: 10rpx;
+    font-size: 28rpx;
+}
+.level-bg{
+    height: 10rpx;
+    width: 200rpx;
+    background-color: #ccc;
+}
+.level-content{
+    background-color: #fff;
+    height: 100%;
+}
+.level{
+    width: 200rpx;
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.level>text:first-child{
+    margin-right: 20rpx;
+}
+.out{
+    position: absolute;
+    top: 330rpx;
+    width: 100vw;
+    margin-bottom: 50rpx;
+}
+.level-info{
+    width: 82%;
+    background-color: #fff;
+    margin: 0 5%;
+    font-size: 24rpx;
+    padding: 4%;
+    border-radius: 30rpx;
+}
+.level-title,.task-title{
+    font-size: 30rpx;
+    font-weight: 600;
+    margin-bottom: 20rpx;
+}
+.level-txt{
+    color: #B8BAC8;
+    line-height: 1.5rem;
+}
+.level-list{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.level-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.level-item>text:first-child{
+    width: 75rpx;
+    height: 30rpx;
+    border-radius: 15rpx;
+    line-height: 30rpx;
+    background-color: #000;
+    color: #fff;
+}
+.level-item>text:last-child{
+    margin-top: 5rpx;
+    color: #B8BAC8;
+}
+.task{
+    width: 82%;
+    background-color: #fff;
+    margin: 0 5%;
+    font-size: 24rpx;
+    padding: 4%;
+    border-radius: 30rpx;
+    margin-top: 20rpx;
+}
+.task-item{
+    height: 80rpx;
+    width: 100%;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid rgb(240, 240, 240);
+}
+.task-item>text:first-child{
+    float: left;
+}
+.task-item>text:last-child{
+    float: right;
+}

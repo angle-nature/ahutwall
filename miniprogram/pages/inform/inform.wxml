@@ -1,0 +1,23 @@
+<view class="notic-list" wx:for="{{noticList}}">
+    <view class="notic">
+        <view class="time">
+            <text class="txt"> {{item.publish_time}}</text>
+        </view>
+        <view class="bankguand">
+            <view class="notictitle">
+                <text class="title">{{item.notice_title}}</text>
+            </view>
+            <view class="container">
+                {{item.notice_content}}
+            </view>
+            <view class="publisher">
+                <!-- <view class="officalhead">
+                    <image src="{{item.officalhead}}" class="head"></image>
+                </view> -->
+                <view class="officalname">
+                    官方小助手
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

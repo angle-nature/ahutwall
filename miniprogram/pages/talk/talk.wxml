@@ -1,0 +1,35 @@
+<scroll-view class="center" scroll-into-view="{{toView}}" scroll-y="{{true}}" style="height: calc(100vh - {{textareaHeight}}px - {{keybordHeight}}px - 24.8px)">
+    <block wx:for="{{messageList}}" wx:key="index">
+        <view class="talk_time">{{item.talkTime}}</view>
+        <view class="rightBox mess" wx:if="{{item.openId == openId}}" id='msg_{{index}}'>
+            <view wx:if="{{item.showBox&&item.type == 'text'}}" class="option_box">
+                <view class="copy" bindtap="copyMessage" data-content="{{item.content}}">复制</view>
+                <view class="split_line"></view>
+                <view class="delete" bindtap="deleteMessage" data-content="{{item.content}}">撤回</view>
+                <view class="iconfont icon-yousanjiaoxing box_icon"></view>
+            </view>
+            <view wx:if="{{item.showBox&&item.type == 'image'}}" class="delete_box">
+                <view class="delete" bindtap="deleteMessage" data-content="{{item.content}}" data-type="{{item.type}}">撤回</view>
+                <view class="iconfont icon-yousanjiaoxing box_icon"></view>
+            </view>
+            <text class="right message" user-select="{{false}}" wx:if="{{item.type=='text'}}" bindlongpress="showBox" data-index="{{index}}">{{item.content}}</text>
+            <image bindlongpress="showBox" data-index="{{index}}" bindtap="previewImage" data-imagesrc="{{item.content}}" src="{{item.content}}" wx:if="{{item.type=='image'}}" class="imageMessage" mode="widthFix"></image>
+            <view wx:if="{{item.type == 'text'}}" class="iconfont icon-yousanjiaoxing message_icon"></view>
+            <image class="avatar" src="{{rightAvatar}}"></image>
+        </view>
+        <view class="leftBox mess" wx:else id='msg_{{index}}'>
+            <image class="avatar" src="{{leftUserInfo.avatarUrl}}"></image>
+            <view wx:if="{{item.type == 'text'}}" class="iconfont icon-zuosanjiaoxing"></view>
+            <text class="left message" user-select="{{true}}" wx:if="{{item.type=='text'}}">{{item.content}}</text>
+            <image bindtap="previewImage" data-imagesrc="{{item.content}}" src="{{item.content}}" wx:if="{{item.type=='image'}}" class="imageMessage" mode="widthFix"></image>
+        </view>
+    </block>
+</scroll-view>
+<view wx:if="{{showMaskLayer}}" class="mask_layer" bindtap="hideBox"></view>
+<view class="sent_view" animation="{{animationData}}">
+    <view class="commentInput_view">
+        <textarea class="commentInput" type="text" placeholder="发送信息" value="{{content}}" show-confirm-bar="{{false}}" auto-height="{{true}}" fixed="{{true}}" adjust-position="{{false}}" cursor-spacing="20" 	hold-keyboard="{{true}}" bindfocus="getKeybordHeight" bindblur="goToBottom" bindlinechange="getTextareaHeight" bindinput="bindCommentInput"></textarea>
+    </view>
+    <view wx:if="{{content == ''}}" class="iconfont icon-tupian" bindtap="sendImage"></view>
+    <view wx:if="{{content != ''}}" class="sentComment" hover-class="click" bindtap="send">发送</view>
+</view>

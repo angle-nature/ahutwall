@@ -1,0 +1,29 @@
+<view bindtap="gotoWallDetail" data-messageid="{{item.report_message_id}}" data-walltype="{{item.report_wall_type}}" data-isdispose="{{item.isDispose}}" class="notice-list" wx:for="{{reportList}}">
+    <view class="user">
+        <image src="{{item.userInfo[0].avatarUrl}}" class="user-avatar"></image>
+        <view class="userinfo">
+            <view class="top_view">
+                <view class="username">{{item.userInfo[0].nickName}}</view>
+                <view class="notictime">{{item.publish_time}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="report_type">
+        <view class="label">举报标题：</view>
+        <view class="text">{{item.report_type}}</view>
+    </view>
+    <view class="report_content">
+        <view class="label">举报内容：</view>
+        <view class="text">{{item.report_content}}</view>
+    </view>
+    <view class="report_content">
+        <view class="label">举报消息ID：</view>
+        <view class="text">{{item.report_message_id}}</view>
+    </view>
+    <view class="dispose">
+        <view wx:if="{{!item.isDispose}}" catchtap bindtap="deleteReportedMessage" data-messageid="{{item.report_message_id}}" data-type="{{1}}" data-walltype="{{item.report_wall_type}}" class="delete">删除发布</view>
+        <view wx:if="{{!item.isDispose}}" catchtap bindtap="deleteReportedMessage" data-messageid="{{item.report_message_id}}" data-walltype="{{item.report_wall_type}}" data-type="{{2}}" class="reject">驳回举报</view>
+        <view wx:if="{{item.isDispose==1}}" catchtap class="deleted">已删除</view>
+        <view wx:if="{{item.isDispose==2}}" catchtap class="rejected">已驳回</view>
+    </view>
+</view>

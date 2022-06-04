@@ -1,0 +1,70 @@
+<view class="question">
+    <view class="ask">
+        <view class="label">Q1：</view>
+        <view>如何发布信息？</view>
+    </view>
+    <view class="answer">
+        <view class="label">A1：</view>
+        <view>在首页点击右下角的发布图标，选择相应的墙类型，即可在该墙下发布信息。</view>
+    </view>
+</view>
+<view class="image_box">
+    <image mode="widthFix" src="{{images[0]}}"></image>
+    <image mode="widthFix" src="{{images[1]}}"></image>
+</view>
+<view class="question">
+    <view class="ask">
+        <view class="label">Q2：</view>
+        <view>如何删除自己发布的信息？</view>
+    </view>
+    <view class="answer">
+        <view class="label">A2：</view>
+        <view>在我的页面的日常一栏，在要删除的发布信息上左滑，点击删除即可。</view>
+    </view>
+</view>
+<view class="image_box">
+    <image mode="widthFix" src="{{images[2]}}"></image>
+    <image mode="widthFix" src="{{images[3]}}"></image>
+</view>
+<view class="question">
+    <view class="ask">
+        <view class="label">Q3：</view>
+        <view>如何进入私信聊天界面？</view>
+    </view>
+    <view class="answer">
+        <view class="label">A3：</view>
+        <view>点击要私信的对象头像，可以是发布信息的用户，也可以是评论和回复的用户，点击后进入他人个人资料界面，再点击私信按钮即可。</view>
+    </view>
+</view>
+<view class="image_box">
+    <image mode="widthFix" src="{{images[4]}}"></image>
+    <image mode="widthFix" src="{{images[5]}}"></image>
+</view>
+<view class="question">
+    <view class="ask">
+        <view class="label">Q4：</view>
+        <view>如何举报违规信息？</view>
+    </view>
+    <view class="answer">
+        <view class="label">A4：</view>
+        <view>在发布信息详情页点击 ... ,选择相应的举报类型，然后填写相关的举报信息，点击提交即可，对于违规信息管理员确认后将删除此条信息。（举报信息以及处理结果不会反馈给举报用户和被举报用户）</view>
+    </view>
+</view>
+<view class="image_box">
+    <image mode="widthFix" src="{{images[6]}}"></image>
+    <image mode="widthFix" src="{{images[7]}}"></image>
+</view>
+<view class="question">
+    <view class="ask">
+        <view class="label">Q5：</view>
+        <view>在二手交易墙和失物招领墙如何完成交易？</view>
+    </view>
+    <view class="answer">
+        <view class="label">A5：</view>
+        <view>该小程序仅仅只是提供一个平台，用户需要与发布信息的用户进行沟通，在线下完成交易。对于被骗造成的任何损失该小程序概不负责，请各位用户谨慎完成交易。</view>
+    </view>
+</view>
+<view class="image_box">
+    <image mode="widthFix" src="{{images[8]}}"></image>
+    <image mode="widthFix" src="{{images[9]}}"></image>
+</view>

@@ -1,0 +1,54 @@
+page {
+    background-color: rgb(240, 240, 240);
+}
+
+.notic {
+    display: row;
+    margin: 50rpx 0;
+}
+
+.time {
+    text-align: center;
+    font-size: 27rpx;
+}
+
+.bankguand {
+    width: 82%;
+    padding: 4%;
+    margin: 0rpx auto;
+    margin-top: 20rpx;
+    border-radius: 30rpx;
+    background-color: white;
+    box-shadow: 3rpx 3rpx 10rpx 3rpx rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.container {
+    margin: 20rpx 0;
+    width: 100%;
+    font-size: 27rpx;
+    height: fit-content;
+}
+
+.publisher {
+    margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+}
+
+.head {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 12.5%;
+}
+
+.officalname {
+    position: absolute;
+    right: 50rpx;
+    font-size: 24rpx;
+    color: rgb(138, 138, 138);
+}

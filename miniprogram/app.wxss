@@ -1,0 +1,97 @@
+/**app.wxss**/
+@import './styles/iconfont.wxss';
+
+.container {
+  height: 90vh;
+  width: 100vw;
+}
+
+.buttons {
+  width: 400rpx;
+  height: 70rpx;
+  position: absolute;
+  bottom: 50rpx;
+  right: 25rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons .save {
+  background-color: rgb(138, 138, 138);
+  margin-right: 30rpx;
+  width: 230rpx;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+  color: white;
+}
+
+.buttons .publish {
+  background-color: rgb(51, 51, 51);
+  width: 130rpx;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+  color: white;
+}
+
+/* 一级标题 */
+.text_level1 {
+  font-size: 28rpx;
+}
+
+/* 二级标题 */
+.text_level2 {
+  font-size: 26rpx;
+}
+
+/* 正文字体大小 */
+.text_body {
+  font-size: 24rpx;
+}
+
+.placeholder_class {
+  font-size: 24rpx;
+}
+
+.blank_tip {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 200rpx;
+  font-size: 28rpx;
+  color: rgb(138, 138, 138);
+}
+
+.text_blank_tip{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 100rpx;
+    font-size: 27rpx;
+    color: rgb(138, 138, 138);
+}
+
+.toBottom_tip{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 20rpx; */
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background-color: white;
+}
+
+.toBottom_tip .line{
+  height: 1rpx;
+  width: 180rpx;
+  background-color: rgb(200, 200, 200);
+}
+
+.toBottom_tip .theEnd{
+  margin: 0 50rpx;
+  font-size: 20rpx;
+  color: rgb(200, 200, 200);
+}

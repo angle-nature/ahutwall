@@ -1,0 +1,33 @@
+<view class="input_box">
+    <textarea placeholder="快来点评学校的美食吧~" maxlength="500" bindinput="bindInputContent"></textarea>
+    <scroll-view wx:if="{{images.length != 0}}" class="images_box" scroll-y="true">
+        <view class="image_view" wx:for="{{images}}">
+            <image src="{{item}}" mode="aspectFill" bindtap="previewImage" data-imageurl="{{item}}"></image>
+            <view class="iconfont icon-chacha" bindtap="deleteImage" data-imageurl="{{item}}"></view>
+        </view>
+    </scroll-view>
+    <view class="uploadImage" bindtap="uploadImage">
+        <text class="iconfont icon-jia">上传照片</text>
+    </view>
+</view>
+<view class="price_view">
+    <text class="iconfont icon-a-ziyuan10"></text>
+    <view class="price_label">食堂</view>
+    <picker class="canteenPicker" mode="selector" range="{{canteens}}" value="{{index}}" bindchange="selectCanteen">
+        <view class="canteen" style="color: {{selectedStatus?'#000000':'#838282'}};">{{canteens[index]}}</view>
+    </picker>
+</view>
+<view class="price_view">
+    <text class="iconfont icon-qunfengyijianfankui"></text>
+    <view class="price_label">评分</view>
+    <input type="number" placeholder="0.0-5.0" bindinput="bindInputMark" />
+</view>
+<!-- <view class="price_view">
+    <text class="iconfont icon-niming"></text>
+    <view class="price_label">是否匿名</view>
+    <switch type="switch" color="#c7b071" bindchange="bindAnonymityStatus"></switch>
+</view> -->
+<view class="buttons">
+    <!-- <view class="save" bindtap="save">保存草稿</view> -->
+    <view class="publish" bindtap="bindsumbit">发布</view>
+</view>

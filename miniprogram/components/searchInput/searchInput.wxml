@@ -1,0 +1,8 @@
+<view class="search_box">
+    <view class="search_input">
+        <view class="iconfont icon-search"></view>
+        <input class="placeholder" type="text" placeholder="{{placeholder}}" value="{{inputValue}}" bindinput="bindInputKey" confirm-type="search"></input>
+        <view class="button" style="background-color: {{themeColor}};" bindtap="bindsearch">搜索</view>
+    </view>
+</view>
+<view class="blank_box"></view>

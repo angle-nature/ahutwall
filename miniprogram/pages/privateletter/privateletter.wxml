@@ -1,0 +1,17 @@
+<view class="notic-list" wx:for="{{privateLetterList}}">
+    <navigator url="../../pages/talk/talk?userId={{item.chatUser[0].openid}}">
+        <view class="user">
+            <image src="{{item.chatUser[0].avatarUrl}}" class="user-avatar"></image>
+            <view class="userinfo">
+                <view class="top_view">
+                    <view class="username">{{item.chatUser[0].nickName}}</view>
+                    <view class="notictime">{{item.messageLatest.createTime}}</view>
+                </view>
+                <view class="privateLetter_conetnt">{{item.messageLatest.type=='text'?item.messageLatest.content:'[图片]'}}</view>
+            </view>
+        </view>
+    </navigator>
+</view>
+<view class="text_blank_tip" wx:if="{{privateLetterList.length == 0}}">
+    暂无私信~
+</view>

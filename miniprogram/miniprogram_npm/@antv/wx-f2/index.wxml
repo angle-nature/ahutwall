@@ -1,0 +1,9 @@
+<canvas
+  type="2d"
+  class="f2-canvas"
+  bindtouchstart="touchStart"
+  bindtouchmove="touchMove"
+  bindtouchend="touchEnd"
+  id="myChart"
+>
+</canvas>

@@ -1,0 +1,58 @@
+<searchInput placeholder="快来寻找你想要的物品吧~" inputValue="{{searchKey}}" themeColor="#6fba4d" bindsearch="bindsearch"></searchInput>
+<gotoTop color="#6fba4d" wx:if="{{scrollTop>400}}"></gotoTop>
+<tabs tabs="{{tabs}}" themeColor="#6fba4d" styleType="1" bindtabsItemChange="handleTabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="goods_content">
+            <view wx:if="{{messages.length == 0}}" class="blank_tip">
+                <image mode="widthFix" style="width: 90vw;" src="../../icons/noContent2.png"></image>
+            </view>
+            <view wx:for="{{messages}}" class="goods_item">
+                <navigator url="/pages/secondWallDetail/secondWallDetail?_id={{item._id}}">
+                    <view class="image_box">
+                        <image mode="aspectFill" src="{{item.images_content[0]}}"></image>
+                    </view>
+                    <view class="goods_name">{{item.goods_name}}</view>
+                    <view class="goods_price"><text>￥</text>{{item.price}}</view>
+                    <view class="goods_counteroffer">{{item.counteroffer}}</view>
+                    <view class="head_view">
+                        <image class="userAvatar" src="{{item.userInfo[0].avatarUrl}}"></image>
+                        <view class="text_view">
+                            <view class="userName">{{item.userInfo[0].nickName}}</view>
+                            <view class="publish_time">{{item.publish_time}}</view>
+                        </view>
+                        <view class="level">LV.{{item.userInfo[0].level}}</view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{tabs[1].isActive}}">
+        <view class="goods_content">
+            <view wx:if="{{messages.length == 0}}" class="blank_tip">
+                <image mode="widthFix" style="width: 90vw;" src="../../icons/noContent2.png"></image>
+            </view>
+            <view wx:for="{{messages}}" class="goods_item">
+                <navigator url="/pages/secondWallDetail/secondWallDetail?_id={{item._id}}">
+                    <view class="image_box">
+                        <image mode="aspectFill" src="{{item.images_content[0]}}"></image>
+                    </view>
+                    <view class="goods_name">{{item.goods_name}}</view>
+                    <view class="goods_price">￥{{item.min_price}}-{{item.max_price}}</view>
+                    <view class="head_view">
+                        <image class="userAvatar" src="{{item.userInfo[0].avatarUrl}}"></image>
+                        <view class="text_view">
+                            <view class="userName">{{item.userInfo[0].nickName}}</view>
+                            <view class="publish_time">{{item.publish_time}}</view>
+                        </view>
+                        <view class="level">LV.{{item.userInfo[0].level}}</view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </block>
+    <view wx:if="{{isBottom&&isTounchedBottom}}" class="toBottom_tip">
+        <view class="line"></view>
+        <view class="theEnd">THE END</view>
+        <view class="line"></view>
+    </view>
+</tabs>

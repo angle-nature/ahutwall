@@ -1,0 +1,22 @@
+{
+  "name": "miniprogram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "@antv/wx-f2": "^2.1.1",
+    "csstype": "^3.0.11",
+    "fecha": "^4.2.3",
+    "hammerjs": "^2.0.8",
+    "regenerator-runtime": "^0.13.9",
+    "tslib": "^2.4.0",
+    "type-fest": "^0.15.1",
+    "wolfy87-eventemitter": "^5.2.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

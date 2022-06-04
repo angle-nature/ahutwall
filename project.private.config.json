@@ -1,0 +1,65 @@
+{
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "vindicateDetail",
+                    "pathName": "pages/vindicateWallDetail/vindicateWallDetail",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "vindicate_detail",
+                    "pathName": "pages/vindicateWallDetail/vindicateWallDetail",
+                    "query": "_id=d2fe6f2062386d9d00f3ecc85115002e",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "talk",
+                    "pathName": "pages/talk/talk",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "set",
+                    "pathName": "pages/set/set",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "wall",
+                    "pathName": "pages/wall/wall",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "help",
+                    "pathName": "pages/help/help",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "projectname": "ahutwall",
+    "setting": {
+        "urlCheck": true,
+        "coverView": true,
+        "compileHotReLoad": true,
+        "lazyloadPlaceholderEnable": false,
+        "preloadBackgroundData": false,
+        "autoAudits": false,
+        "useMultiFrameRuntime": true,
+        "showShadowRootInWxmlPanel": true,
+        "useStaticServer": true,
+        "showES6CompileOption": false,
+        "checkInvalidKey": true
+    },
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}
