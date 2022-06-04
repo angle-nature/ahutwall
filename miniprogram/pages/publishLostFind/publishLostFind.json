@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "tabs":"../../components/Tabs/Tabs"
-  },
-  "navigationBarTitleText": "发布到失物招领墙"
-}
